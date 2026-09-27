@@ -1,0 +1,14 @@
+{
+  "name": "suluh-citation-gate",
+  "version": "1.0.0",
+  "description": "Pass-or-block output check for model-written legal explanations: approved laws only, no unsourced legal verdicts.",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "Lutfitek",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test": "node --test test/citations.test.js test/gate_g1_parser.test.js test/gate_g2_alias.test.js test/gate_g4_conclusions.test.js",
+    "bench": "node bench/gate/run.mjs"
+  }
+}

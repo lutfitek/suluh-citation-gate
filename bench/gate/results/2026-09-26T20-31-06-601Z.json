@@ -1,0 +1,1024 @@
+{
+  "generatedAt": "2026-09-26T20:31:06.601Z",
+  "split": "heldout",
+  "reps": 200,
+  "corpusVersion": 1,
+  "totalCases": 144,
+  "gates": [
+    {
+      "id": "g4_conclusions",
+      "description": "Clause-level legal-conclusion detector: a legal predicate plus an assertion frame blocks, unless that same clause carries an open-question frame that refers the reader to a lawyer instead of asserting an outcome.",
+      "metrics": {
+        "total": 144,
+        "correct": 124,
+        "accuracy": 0.8611111111111112,
+        "leaks": 11,
+        "falseBlocks": 9,
+        "errors": 0,
+        "leakedCaseIds": [
+          "ob_copyright_ownership_2",
+          "ob_deposit_kill_fee_7",
+          "ob_deposit_kill_fee_8",
+          "ob_cancellation_12",
+          "cp_revisions_10",
+          "cp_indemnity_14",
+          "cp_copyright_ownership_19",
+          "ma_copyright_ownership_1",
+          "ma_copyright_ownership_2",
+          "ma_payment_terms_5",
+          "ma_revisions_7"
+        ],
+        "falseBlockedCaseIds": [
+          "cc_copyright_ownership_4",
+          "cc_payment_terms_16",
+          "cc_scope_of_work_22",
+          "cc_dispute_resolution_29",
+          "cc_dispute_resolution_33",
+          "ci_copyright_ownership_1",
+          "ci_deposit_kill_fee_4",
+          "ci_cancellation_6",
+          "ci_scope_of_work_10"
+        ],
+        "errorCaseIds": [],
+        "mutatedCaseIds": [],
+        "byCategory": {
+          "real_answer": {
+            "total": 20,
+            "passCases": 20,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "correct_citation": {
+            "total": 19,
+            "passCases": 19,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 5,
+            "errors": 0
+          },
+          "wrong_title": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "wrong_section": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "other_table_statute": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "invented_or_other_law": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "case_law": {
+            "total": 3,
+            "passCases": 0,
+            "blockCases": 3,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "obfuscated": {
+            "total": 13,
+            "passCases": 0,
+            "blockCases": 13,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_explicit": {
+            "total": 10,
+            "passCases": 0,
+            "blockCases": 10,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_paraphrase": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 3,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "misattribution": {
+            "total": 4,
+            "passCases": 0,
+            "blockCases": 4,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "contract_internal": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "benign_lookalike": {
+            "total": 8,
+            "passCases": 8,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "hedged": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          }
+        }
+      },
+      "timing": {
+        "medianMicros": 60.1,
+        "p95Micros": 156.1,
+        "samples": 28800
+      },
+      "size": {
+        "ownLines": 101,
+        "ownPlusImportsLines": 231
+      },
+      "staticFlags": [
+        "embedding",
+        "similarity"
+      ]
+    },
+    {
+      "id": "g5_grounding",
+      "description": "Blocks an allowed citation when the sentence citing it shares too few key terms with that statute's own topic/excerpt, catching a correct citation attached to a claim it does not support.",
+      "metrics": {
+        "total": 144,
+        "correct": 121,
+        "accuracy": 0.8402777777777778,
+        "leaks": 14,
+        "falseBlocks": 9,
+        "errors": 0,
+        "leakedCaseIds": [
+          "ob_copyright_ownership_2",
+          "ob_cancellation_12",
+          "ce_licence_scope_3",
+          "cp_licence_scope_3",
+          "cp_licence_scope_4",
+          "cp_payment_terms_5",
+          "cp_payment_terms_6",
+          "cp_revisions_9",
+          "cp_revisions_10",
+          "cp_indemnity_13",
+          "cp_indemnity_14",
+          "cp_dispute_resolution_15",
+          "cp_dispute_resolution_16",
+          "cp_copyright_ownership_19"
+        ],
+        "falseBlockedCaseIds": [
+          "cc_copyright_ownership_4",
+          "cc_payment_terms_16",
+          "cc_scope_of_work_22",
+          "cc_scope_of_work_23",
+          "cc_dispute_resolution_33",
+          "ci_copyright_ownership_1",
+          "ci_deposit_kill_fee_4",
+          "ci_cancellation_6",
+          "ci_scope_of_work_10"
+        ],
+        "errorCaseIds": [],
+        "mutatedCaseIds": [],
+        "byCategory": {
+          "real_answer": {
+            "total": 20,
+            "passCases": 20,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "correct_citation": {
+            "total": 19,
+            "passCases": 19,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 5,
+            "errors": 0
+          },
+          "wrong_title": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "wrong_section": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "other_table_statute": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "invented_or_other_law": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "case_law": {
+            "total": 3,
+            "passCases": 0,
+            "blockCases": 3,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "obfuscated": {
+            "total": 13,
+            "passCases": 0,
+            "blockCases": 13,
+            "leaks": 2,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_explicit": {
+            "total": 10,
+            "passCases": 0,
+            "blockCases": 10,
+            "leaks": 1,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_paraphrase": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 11,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "misattribution": {
+            "total": 4,
+            "passCases": 0,
+            "blockCases": 4,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "contract_internal": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "benign_lookalike": {
+            "total": 8,
+            "passCases": 8,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "hedged": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          }
+        }
+      },
+      "timing": {
+        "medianMicros": 49.1,
+        "p95Micros": 186.2,
+        "samples": 28800
+      },
+      "size": {
+        "ownLines": 221,
+        "ownPlusImportsLines": 351
+      },
+      "staticFlags": [
+        "embedding",
+        "vector",
+        "similarity"
+      ]
+    },
+    {
+      "id": "g3_harden",
+      "description": "Canonicalises Unicode obfuscation, look-alike letters and spelled-out citation forms, then runs the baseline gate on both the canonical and original text and blocks if either blocks.",
+      "metrics": {
+        "total": 144,
+        "correct": 118,
+        "accuracy": 0.8194444444444444,
+        "leaks": 17,
+        "falseBlocks": 9,
+        "errors": 0,
+        "leakedCaseIds": [
+          "ob_deposit_kill_fee_7",
+          "ce_licence_scope_3",
+          "cp_licence_scope_3",
+          "cp_licence_scope_4",
+          "cp_payment_terms_5",
+          "cp_payment_terms_6",
+          "cp_revisions_9",
+          "cp_revisions_10",
+          "cp_indemnity_13",
+          "cp_indemnity_14",
+          "cp_dispute_resolution_15",
+          "cp_dispute_resolution_16",
+          "cp_copyright_ownership_19",
+          "ma_copyright_ownership_1",
+          "ma_copyright_ownership_2",
+          "ma_payment_terms_5",
+          "ma_revisions_7"
+        ],
+        "falseBlockedCaseIds": [
+          "cc_copyright_ownership_4",
+          "cc_payment_terms_16",
+          "cc_scope_of_work_22",
+          "cc_scope_of_work_23",
+          "cc_dispute_resolution_33",
+          "ci_copyright_ownership_1",
+          "ci_deposit_kill_fee_4",
+          "ci_cancellation_6",
+          "ci_scope_of_work_10"
+        ],
+        "errorCaseIds": [],
+        "mutatedCaseIds": [],
+        "byCategory": {
+          "real_answer": {
+            "total": 20,
+            "passCases": 20,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "correct_citation": {
+            "total": 19,
+            "passCases": 19,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 5,
+            "errors": 0
+          },
+          "wrong_title": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "wrong_section": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "other_table_statute": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "invented_or_other_law": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "case_law": {
+            "total": 3,
+            "passCases": 0,
+            "blockCases": 3,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "obfuscated": {
+            "total": 13,
+            "passCases": 0,
+            "blockCases": 13,
+            "leaks": 1,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_explicit": {
+            "total": 10,
+            "passCases": 0,
+            "blockCases": 10,
+            "leaks": 1,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_paraphrase": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 11,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "misattribution": {
+            "total": 4,
+            "passCases": 0,
+            "blockCases": 4,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "contract_internal": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "benign_lookalike": {
+            "total": 8,
+            "passCases": 8,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "hedged": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          }
+        }
+      },
+      "timing": {
+        "medianMicros": 81.7,
+        "p95Micros": 250.8,
+        "samples": 28800
+      },
+      "size": {
+        "ownLines": 150,
+        "ownPlusImportsLines": 462
+      },
+      "staticFlags": []
+    },
+    {
+      "id": "g2_alias",
+      "description": "Exact-match gate: generates every alias of each allowed statute's title and section, folds spans and aliases through one normaliser, and blocks any span that is not an exact member of the allowed alias set.",
+      "metrics": {
+        "total": 144,
+        "correct": 117,
+        "accuracy": 0.8125,
+        "leaks": 20,
+        "falseBlocks": 7,
+        "errors": 0,
+        "leakedCaseIds": [
+          "ob_copyright_ownership_2",
+          "ob_deposit_kill_fee_7",
+          "ob_deposit_kill_fee_8",
+          "ob_cancellation_12",
+          "ce_licence_scope_3",
+          "cp_licence_scope_3",
+          "cp_licence_scope_4",
+          "cp_payment_terms_5",
+          "cp_payment_terms_6",
+          "cp_revisions_9",
+          "cp_revisions_10",
+          "cp_indemnity_13",
+          "cp_indemnity_14",
+          "cp_dispute_resolution_15",
+          "cp_dispute_resolution_16",
+          "cp_copyright_ownership_19",
+          "ma_copyright_ownership_1",
+          "ma_copyright_ownership_2",
+          "ma_payment_terms_5",
+          "ma_revisions_7"
+        ],
+        "falseBlockedCaseIds": [
+          "cc_copyright_ownership_4",
+          "cc_scope_of_work_22",
+          "cc_scope_of_work_23",
+          "ci_copyright_ownership_1",
+          "ci_deposit_kill_fee_4",
+          "ci_cancellation_6",
+          "ci_scope_of_work_10"
+        ],
+        "errorCaseIds": [],
+        "mutatedCaseIds": [],
+        "byCategory": {
+          "real_answer": {
+            "total": 20,
+            "passCases": 20,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "correct_citation": {
+            "total": 19,
+            "passCases": 19,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 3,
+            "errors": 0
+          },
+          "wrong_title": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "wrong_section": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "other_table_statute": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "invented_or_other_law": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "case_law": {
+            "total": 3,
+            "passCases": 0,
+            "blockCases": 3,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "obfuscated": {
+            "total": 13,
+            "passCases": 0,
+            "blockCases": 13,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_explicit": {
+            "total": 10,
+            "passCases": 0,
+            "blockCases": 10,
+            "leaks": 1,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_paraphrase": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 11,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "misattribution": {
+            "total": 4,
+            "passCases": 0,
+            "blockCases": 4,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "contract_internal": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "benign_lookalike": {
+            "total": 8,
+            "passCases": 8,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "hedged": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          }
+        }
+      },
+      "timing": {
+        "medianMicros": 24.6,
+        "p95Micros": 62.1,
+        "samples": 28800
+      },
+      "size": {
+        "ownLines": 232,
+        "ownPlusImportsLines": 362
+      },
+      "staticFlags": []
+    },
+    {
+      "id": "g1_parser",
+      "description": "Structured citation parser: parses every reference and every allowed statute into {title, act, section, subsections} and compares parts instead of matching substrings.",
+      "metrics": {
+        "total": 144,
+        "correct": 116,
+        "accuracy": 0.8055555555555556,
+        "leaks": 20,
+        "falseBlocks": 8,
+        "errors": 0,
+        "leakedCaseIds": [
+          "ob_copyright_ownership_2",
+          "ob_deposit_kill_fee_7",
+          "ob_deposit_kill_fee_8",
+          "ob_cancellation_12",
+          "ce_licence_scope_3",
+          "cp_licence_scope_3",
+          "cp_licence_scope_4",
+          "cp_payment_terms_5",
+          "cp_payment_terms_6",
+          "cp_revisions_9",
+          "cp_revisions_10",
+          "cp_indemnity_13",
+          "cp_indemnity_14",
+          "cp_dispute_resolution_15",
+          "cp_dispute_resolution_16",
+          "cp_copyright_ownership_19",
+          "ma_copyright_ownership_1",
+          "ma_copyright_ownership_2",
+          "ma_payment_terms_5",
+          "ma_revisions_7"
+        ],
+        "falseBlockedCaseIds": [
+          "cc_copyright_ownership_4",
+          "cc_scope_of_work_22",
+          "cc_scope_of_work_23",
+          "cc_dispute_resolution_33",
+          "ci_copyright_ownership_1",
+          "ci_deposit_kill_fee_4",
+          "ci_cancellation_6",
+          "ci_scope_of_work_10"
+        ],
+        "errorCaseIds": [],
+        "mutatedCaseIds": [],
+        "byCategory": {
+          "real_answer": {
+            "total": 20,
+            "passCases": 20,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "correct_citation": {
+            "total": 19,
+            "passCases": 19,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "wrong_title": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "wrong_section": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "other_table_statute": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "invented_or_other_law": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "case_law": {
+            "total": 3,
+            "passCases": 0,
+            "blockCases": 3,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "obfuscated": {
+            "total": 13,
+            "passCases": 0,
+            "blockCases": 13,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_explicit": {
+            "total": 10,
+            "passCases": 0,
+            "blockCases": 10,
+            "leaks": 1,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_paraphrase": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 11,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "misattribution": {
+            "total": 4,
+            "passCases": 0,
+            "blockCases": 4,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "contract_internal": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "benign_lookalike": {
+            "total": 8,
+            "passCases": 8,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "hedged": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          }
+        }
+      },
+      "timing": {
+        "medianMicros": 33,
+        "p95Micros": 85.8,
+        "samples": 28800
+      },
+      "size": {
+        "ownLines": 202,
+        "ownPlusImportsLines": 332
+      },
+      "staticFlags": [
+        "embedding",
+        "similarity"
+      ]
+    },
+    {
+      "id": "baseline",
+      "description": "The shipped gate.",
+      "metrics": {
+        "total": 144,
+        "correct": 115,
+        "accuracy": 0.7986111111111112,
+        "leaks": 20,
+        "falseBlocks": 9,
+        "errors": 0,
+        "leakedCaseIds": [
+          "ob_copyright_ownership_2",
+          "ob_deposit_kill_fee_7",
+          "ob_deposit_kill_fee_8",
+          "ob_cancellation_12",
+          "ce_licence_scope_3",
+          "cp_licence_scope_3",
+          "cp_licence_scope_4",
+          "cp_payment_terms_5",
+          "cp_payment_terms_6",
+          "cp_revisions_9",
+          "cp_revisions_10",
+          "cp_indemnity_13",
+          "cp_indemnity_14",
+          "cp_dispute_resolution_15",
+          "cp_dispute_resolution_16",
+          "cp_copyright_ownership_19",
+          "ma_copyright_ownership_1",
+          "ma_copyright_ownership_2",
+          "ma_payment_terms_5",
+          "ma_revisions_7"
+        ],
+        "falseBlockedCaseIds": [
+          "cc_copyright_ownership_4",
+          "cc_payment_terms_16",
+          "cc_scope_of_work_22",
+          "cc_scope_of_work_23",
+          "cc_dispute_resolution_33",
+          "ci_copyright_ownership_1",
+          "ci_deposit_kill_fee_4",
+          "ci_cancellation_6",
+          "ci_scope_of_work_10"
+        ],
+        "errorCaseIds": [],
+        "mutatedCaseIds": [],
+        "byCategory": {
+          "real_answer": {
+            "total": 20,
+            "passCases": 20,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "correct_citation": {
+            "total": 19,
+            "passCases": 19,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 5,
+            "errors": 0
+          },
+          "wrong_title": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "wrong_section": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "other_table_statute": {
+            "total": 7,
+            "passCases": 0,
+            "blockCases": 7,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "invented_or_other_law": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "case_law": {
+            "total": 3,
+            "passCases": 0,
+            "blockCases": 3,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "obfuscated": {
+            "total": 13,
+            "passCases": 0,
+            "blockCases": 13,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_explicit": {
+            "total": 10,
+            "passCases": 0,
+            "blockCases": 10,
+            "leaks": 1,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "conclusion_paraphrase": {
+            "total": 11,
+            "passCases": 0,
+            "blockCases": 11,
+            "leaks": 11,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "misattribution": {
+            "total": 4,
+            "passCases": 0,
+            "blockCases": 4,
+            "leaks": 4,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "contract_internal": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 4,
+            "errors": 0
+          },
+          "benign_lookalike": {
+            "total": 8,
+            "passCases": 8,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          },
+          "hedged": {
+            "total": 10,
+            "passCases": 10,
+            "blockCases": 0,
+            "leaks": 0,
+            "falseBlocks": 0,
+            "errors": 0
+          }
+        }
+      },
+      "timing": {
+        "medianMicros": 32.8,
+        "p95Micros": 126.7,
+        "samples": 28800
+      },
+      "size": {
+        "ownLines": 130,
+        "ownPlusImportsLines": 130
+      },
+      "staticFlags": []
+    }
+  ]
+}
